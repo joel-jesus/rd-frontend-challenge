@@ -1,35 +1,130 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
 }
 *:focus {
-    outline: 0;
+  outline: 0;
 }
-html, body, #app {
-    height: 100%;
+html,
+body,
+#app {
+  height: 100%;
 }
-body, input, button {
-    font: 14px 'Roboto', sans-serif;
+body,
+input,
+button {
+  font: 14px "Roboto", sans-serif;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 ul {
-    list-style: none;
+  list-style: none;
 }
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 body {
-    -webkit-font-smoothing: antialiased;
-    background: linear-gradient(-45deg, #aaa 25%, #eee 100%);
-    background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  background: linear-gradient(-45deg, #aaa 25%, #eee 100%);
+  background-attachment: fixed;
 }
 
 /**
 * YOUR CODE HERE
 */
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo {
+  width: 2.18rem;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  background: #dadada;
+  padding: 0px 10px 20px;
+  margin-top: 10px;
+  border-radius: 18px 1px 18px 1px;
+}
+.login form input {
+  width: 300px;
+  padding: 7px;
+  border-radius: 4px;
+  border: 1px solid #d1d1d1;
+  outline: none;
+  background: #d1d1d1;
+}
+.login form input {
+  margin-top: 10px;
+}
+
+.login form input:focus {
+  background-color: #d1d1d1;
+}
+
+.login form input[type="submit"]:not([disabled="disabled"]) {
+  background-color: #008429;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.login form input[type="submit"]:hover {
+  background-color: #00a333;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.login form input[type="submit"]:disabled {
+  background-color: #d1d1d1;
+  color: #fff;
+  transition: 0.3s;
+  cursor: default;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 600px;
+}
+
+.container li {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  background: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.container li img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: transform 0.2s;
+  filter: grayscale(1);
+}
+
+.container li img:hover {
+  transform: scale(2);
+  filter: grayscale(0);
+  cursor: pointer;
+}
+
+.container li p {
+  margin-left: 10px;
+}
